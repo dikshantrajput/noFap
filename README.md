@@ -7,6 +7,7 @@ The NoFap Extension is a browser tool designed to block access to pornographic w
 - Automatically blocks access to pornographic websites.
 - No need to manually add or load URLs.
 - Simple and straightforward functionality with no complex UI.
+- No data collection.
 
 ## Installation (on chromium based browsers)
 1. Clone the [extension repository](https://github.com/dikshantrajput/noFap) or [download](https://github.com/dikshantrajput/noFap/blob/main/noFap.zip).
