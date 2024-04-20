@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoFap Extension</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1f2937;
+            color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #374151;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e5e7eb;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature {
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-bottom: 0.75rem;
+        }
+
+        .install-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .install-link {
+            padding: 10px 20px;
+            background-color: #10b981;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .install-link:hover {
+            background-color: #059669;
+        }
+
+        .disclaimer {
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #9ca3af;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">NoFap</h1>
+        <p class="description">Block access to pornographic websites effortlessly.</p>
+
+        <div class="features">
+            <h2 class="font-semibold text-lg mb-3">Features:</h2>
+            <ul class="list-disc ml-6">
+                <li class="feature">Automatically blocks access to pornographic websites.</li>
+                <li class="feature">No need to manually add or load URLs.</li>
+                <li class="feature">Simple and straightforward functionality with no complex UI.</li>
+            </ul>
+        </div>
+
+        <div class="install-links">
+            <button onclick="downloadExtension('chrome')" class="install-link">Download for Chrome</button>
+            <button onclick="downloadExtension('firefox')" class="install-link ml-4">Download for Firefox</button>
+        </div>
+
+        <p class="disclaimer mt-6">This extension is not endorsed by or affiliated with any specific website or organization. It is an independent project developed solely for the purpose of helping users limit their exposure to explicit content online.</p>
+    </div>
+</body>
+
+
+<script>
+    function downloadExtension(platform) {
+        let filePath = 'noFap.zip';
+        let fileName = 'noFap.zip';
+        if(platform === "firefox"){
+            filePath = "noFap-firefox.zip"
+        }
+        let link = document.createElement('a');
+        link.href = filePath;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+</html>
